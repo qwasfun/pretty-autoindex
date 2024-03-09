@@ -79,7 +79,7 @@ function fetchFileInfo(dir) {
       </div>
       <ul v-if="files !== null" class="files menu">
         <template v-if="pathArray.length > 0">
-          <Directory name=".." :path="pathArray.slice(0, -1).join('/') + '/'"> </Directory>
+          <Directory name=".." :path="'/' + pathArray.slice(0, -1).join('/') + '/'"> </Directory>
         </template>
         <template v-for="file in files">
           <Directory
